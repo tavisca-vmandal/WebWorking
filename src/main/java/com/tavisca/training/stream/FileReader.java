@@ -14,7 +14,7 @@ public class FileReader {
 
 
         BufferedInputStream bufferedInputStream=new BufferedInputStream(fileInputStream);
-        
+
         try(bufferedInputStream) {
             byte[] buffer=new byte[8];
 

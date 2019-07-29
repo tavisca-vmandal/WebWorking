@@ -16,7 +16,7 @@ public class DataOutputStream {
             dataOutputStream.flush();
         } catch (IOException e) {
 
-            System.out.println("Exception occured:"+e.getMessage());
+            System.out.println("Exception occurred:"+e.getMessage());
             e.printStackTrace();
         }
     }

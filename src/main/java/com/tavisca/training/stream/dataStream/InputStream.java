@@ -2,15 +2,22 @@ package com.tavisca.training.stream.dataStream;
 
 import java.io.*;
 
-public class DataInputStream {
+public class InputStream {
 
-    public  String readFile(String fileName) throws IOException {
+    public  void readData(String fileName) throws IOException {
 
         FileInputStream fileInputStream=new FileInputStream(fileName);
-        DataInputStream dataInputStream=new DataInputStream(fileInputStream);
+        DataInputStream dataInputStream = new DataInputStream(fileInputStream);
 
         try(dataInputStream) {
-         boolean b=dataInputStream.readBooolean();
+         boolean b=dataInputStream.readBoolean();
+         int i=dataInputStream.readInt();
+         float f=dataInputStream.readFloat();
+
+         System.out.println(" boolean : "+b);
+         System.out.println(" int : "+i);
+         System.out.println(" float : "+f);
+
 
         } catch (IOException e) {
             e.printStackTrace();
